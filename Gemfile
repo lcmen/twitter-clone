@@ -7,6 +7,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'sqlite3', '~> 1.4'
+gem 'unpoly-rails'
 gem 'webpacker', '~> 4.0'
 
 group :development do

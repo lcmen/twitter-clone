@@ -3,6 +3,10 @@ class LikesController < ApplicationController
     post = Post.find(params[:post_id])
     post.increment! :likes_count
 
-    redirect_to posts_path
+    if up?
+      render partial: post
+    else
+      redirect_to posts_path
+    end
   end
 end
