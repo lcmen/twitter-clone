@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Twitter Clone</h1>
+
+  <%= render "form" %>
+
+  <div id="timeline">
+    <%= render partial: "post", collection: @posts %>
+  </div>
+</div>
