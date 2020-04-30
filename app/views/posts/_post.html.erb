@@ -5,12 +5,12 @@
       <small>- <%= time_ago_in_words post.created_at %> ago</small>
     </h5>
     <div class="card-text lead mb-2"><%= post.body %></div>
-    <%= link_to post_reposts_path(post), method: :post, class: "card-link",
-      "up-follow": true, "up-method": "post", "up-target": "#post-#{post.id}" do %>
+    <%= button_to post_reposts_path(post), method: :post, class: "p-0 btn btn-link",
+      form: { "up-target": "#post-#{post.id}" }, form_class: "d-inline-block" do %>
       Repost (<%= tag.span post.reposts_count, id: "post-#{post.id}-reposts" %>)
     <% end %>
-    <%= link_to post_likes_path(post), method: :post, class: "card-link",
-      "up-follow": true, "up-method": "post", "up-target": "#post-#{post.id}" do %>
+    <%= button_to post_likes_path(post), method: :post, class: "p-0 btn btn-link",
+      form: { "up-target": "#post-#{post.id}" }, form_class: "d-inline-block" do %>
       Like (<%= tag.span post.likes_count, id: "post-#{post.id}-likes" %>)
     <% end %>
   </div>
